@@ -1,0 +1,160 @@
+---
+title: "MATH 271 Project Proposal"
+author: "WRITE YOUR GROUP NAME HERE"
+date: "Built `r Sys.Date()`"
+output:
+  html_document:
+    fig_caption: yes
+    theme: lumen
+    toc: yes
+    toc_depth: 2
+    df_print: paged
+    toc_float:
+      collapsed: no
+    code_folding: hide
+---
+
+```{r setup, message=FALSE}
+# Load all packages here:
+library(tidyverse)
+library(magrittr)
+
+# Set seed value of random number generator to get "replicable" random numbers.
+# The choice of seed value of 42 was a not-particularly-arbitrary one on my part.
+set.seed(42)
+```
+
+
+# Data
+
+_Describe the source of your data here. Give as formal of a bibliographic reference as you can manage. Provide a link to the web page where you obtained the data._
+
+## Load data into R
+
+_Include the code to load your data here. You should have the original data set committed to your project directory, ideally in `csv` format._
+
+```{r import, message=FALSE}
+
+```
+
+## Clean variable names
+
+_Before doing anything else, fix up the variable names so that they are understandable, memorable, and easy to type. Piping your data frame through the `janitor::clean_names()` function is a great way to start, followed up with some custom tweaking with `dplyr::rename()`._
+
+```{r clean_names}
+
+```
+
+## Data wrangling
+
+_Complete any other appropriate your data wrangling here. If your data set is very large (say, more than a few thousand rows) you may wish to filter it down to a smaller group. Pay special attention to your categorical variable `z`. If `z` has more than five categories, you should collapse these down to 3--5 levels using `forcats::fct_collapse()`. Even if you don't collapse levels, you may wish to rename the levels nicely at this time. Your categorical variable might even be recoreded as an integer, in which case you need to do all the work of creating a factor by hand._
+
+```{r wrangle}
+
+```
+
+
+-----------------
+
+
+# Exploratory analysis
+
+## Pare down variables
+
+_`select()` the following variables **in this order** and drop all others. Eliminating all unnecessary variables will making visually exploring the raw values less taxing mentally, as we'll have less data to look at._
+
+1. _First: An identification variable (if any)_
+1. _Second: The outcome variable $y$_
+1. _Third: The numerical explanatory variable $x$_
+1. _Fourth: The categorical explanatory variable $z$_
+1. _More: one or two other variable you find interesting (if any)_
+
+```{r select}
+
+```
+
+## Look at your data using glimpse
+
+_Look at your data using the `glimpse()` function._
+
+```{r glimpse}
+
+```
+
+## Show a preview of your data
+
+_Look at your data another way by displaying a random sample of 5 rows of your data frame by piping it into the `slice_sample(n=10)` function._
+
+```{r slice_sample}
+
+```
+
+
+## Inspect for missing values
+
+_Look for missing values. If there are missing values in the important columns (`x,y,z`), drop the row. Make sure you still have at least 50 observations._
+
+
+```{r drop_na}
+
+```
+
+
+## Summary statistics
+
+_Compute summary statistics (`mean`, `sd`) of the numerical variables. Compute the counts and proportions for the categorical variable. Make sure that each category has at least 5 observations._
+
+```{r summarize}
+
+```
+
+
+## Histogram of outcome variable 
+
+_Visualize the distribution of the outcome variable using a histogram and comment._
+
+```{r histogram, fig.cap = "Figure 1. WRITE A CAPTION HERE", fig.align = "center"}
+
+```
+
+
+
+## Scatterplot 
+
+_Visualize the relationship of the outcome variable and the numerical explanatory variable using a scatterplot and comment._
+
+```{r, fig.cap = "Figure 2. WRITE A CAPTION HERE", fig.align = "center"}
+
+```
+
+
+## Boxplot
+
+_Visualize the relationship of the outcome variable and the categorical explanatory variable using an appropriate plot (boxplot/violin/density curves) and comment._
+
+```{r boxplot, fig.cap = "Figure 3. WRITE A CAPTION HERE", fig.align = "center"}
+
+```
+
+## Colored scatterplot
+
+_Visualize the relationship of the outcome variable and both explanatory variables using a scatterplot with the point color indicating the category._
+
+```{r scatter_color, fig.cap = "Figure 4. WRITE A CAPTION HERE", fig.align = "center"}
+
+```
+
+-------------
+
+Congratulations! 🤙 If you were able to make the final plot then your data meets all the project requirements! 
+
+## Project planning
+
+The remaining tasks in the project are to:
+
+- carry out the hypothesis tests described in the instructions document
+- create the residual diagnostic plots
+- put everything together into a slideshow
+- present the results to the class
+
+In the space below: Describe each group member's contribution to the project so far, and make a short plan for who will carry out each of the remaining tasks (and give rough due dates for each step.)

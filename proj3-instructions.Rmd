@@ -1,0 +1,142 @@
+---
+title: "Final Project: Complete Data Report"
+author: "Math 271"
+date: "Spring 2022"
+output: 
+  html_document: default
+
+---
+
+```{r setup, include=FALSE, eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache=TRUE)
+library(tidyverse)
+library(magrittr)
+library(moderndive)
+```
+
+## Project Outline
+
+In this project you will work with a partner to create a more formal/structured data science presentation using a data set of your choosing.
+
+
+1. Identify project data set: This is the least straightforward phase of the project. Do not procrastinate, start early and get help/feedback early and often in office hours or via email.
+2. Formal Data Proposal: Fill out a response document form with information about your data, and perform exploratory analysis on the data set.
+3. First submission: Initial submission of the introduction and results portions of the presentation.
+4. Revisions. Incorporate instructor feedback and work on the discussion/conclusion section.
+5. Presentation. During the final exam period for the class, your team will present the project over zoom.
+
+## Deliverables
+
+All deliverables are to be submitted as commits to the `main` branch of your team project repository on Github. All of these are joint submissions with your partner (except the final partner feedback form).
+
+1. A project proposal. This is a form document to be filled in.
+2. First draft submission.
+3. Presentation over Zoom. (and committed to Github repository)
+4. Individually: Teammate peer review form.
+
+Since everything is a team effort this time, I'll leave it up to you how you want to handle the sharing of work. This is good use case for the RStudio Workbench _Share Project_ feature. If one person clones the repository from Github and shares it with the other, then you can both work collaboratively without a lot of git merging. However, you should still regularly commit your files to the git repository and push to github. That way, even if your partner accidentally deletes something important, it is possible to recover it using git.
+
+### Getting Started (Week 1)
+
+1. Find a partner to work with.
+2. Set up the project repository on Github and get it set up to work with however your team thinks best.
+3. Identify a data set to use.
+
+The third step here can be the most challenging aspect of the project. The data set must meet certain minimum requirements
+
+#### Data Requirements
+
+1. A numerical outcome variable $y$.
+2. Two explanatory variables:
+    + A numerical variable $x$.
+    + A categorical variable $z$ that has 3--5 levels. (Note: You can collapse excess levels down to 5 during data wrangling if needed.)
+3. At least 50 observations/rows.
+
+If the ggplot command `geom_point(aes(x=x, y=y, color=z))` makes a sensible scatterplot of your data set, and there are at least 50 points in the plot, then your data is good to go.
+
+#### Possible sources
+
+- Best option: Data from your own research or other courses. 
+- Other good options:
+    + [IPUMS survey & census data](https://ipums.org/){target="_blank"}
+    + [data.world](https://data.world/){target="_blank"}
+    + [Tableau](https://public.tableau.com/en-us/s/resources){target="_blank"}
+    + [Google Dataset Search](https://toolbox.google.com/datasetsearch){target="_blank"}
+    + [StatLib Datasets Archive](http://lib.stat.cmu.edu/datasets/)
+- Journal Articles: A very ambitious team might try to obtain a data set from a published scientific paper. More recently published papers have a higher chance of including the data from the paper in the supplementary material or on a lab web page. This is the most challenging option, as the data will often need significantly more effort wrangling.
+
+Since we have already looked at the FiveThirtyEight data sets for the seminar, please try to choose something from another source. We are looking for more scientific or government-collected data for this project.
+
+
+## Project proposal (Week 2, due Apr 29)
+
+
+Obtain your data set, and save the file to your project folder. Open the `proposal.Rmd` file and complete all of the code chunks. If you can make the last plot then you have a good data set, and you're well on your way to finishing the project. 
+
+Commit your completed proposal document to the `main` branch of your repository by the deadline.
+
+
+## First Draft Submission (Week 3, due Friday May 6)
+
+Create a new Rmarkdown **presentation** (slideshow) document. There are a few options to choose from
+
+- [`ioslides_presentation`](https://bookdown.org/yihui/rmarkdown/ioslides-presentation.html)
+- [`slidy_presentation`](https://bookdown.org/yihui/rmarkdown/slidy-presentation.html)
+- [`revealjs::revealjs_presentation`](https://bookdown.org/yihui/rmarkdown/revealjs.html)
+- [`xaringan::moon_reader`](https://bookdown.org/yihui/rmarkdown/xaringan.html)
+
+Have a look at some example outputs from each of them, choose one you like and go for it. You can change later, but if you're using any of the special features of one of those formats, you might run into trouble.
+
+Your presentation should consist of five sections. You should spend about two minutes of presentation time on each section.
+
+1. Introduction (~2 slides)
+    + What is your research question?
+    + Where did you get your data?
+2. Data Visualization (4 slides)
+    + Copy the four visualizations from the project proposal. Spend a little bit of effort making them look extra nice.
+3. The fitted model (~ 3 slides)
+    + Details of the fitted linear model. 
+    + Show the regression table `summary(your_model)`
+    + Interpret the table by presenting the regression equation for each category as a LaTeX equation.
+    + Test two hypotheses: Is the slope zero? Do all of the categories have the same intercept?
+4. Residual Analysis (4 slides)
+    + Make the following plots
+        - Histogram of model residuals
+        - Scatterplot of predicted values (x) vs residuals (y)
+        - Scatterplot of your numerical predictor (x) vs the residuals (y)
+        - Box/violin plot of your categorical predictor (x) vs the residuals (y)
+5. Discussion/Conclusion (~ 2 slides)
+    + Wrap up by explaining what the statistics allows you to conclude about the research question.
+
+At a minimum, your first draft submission should include slides for sections 1--3. 
+
+Try to adhere to principles of good presentation design, which can be mostly boiled down to: 
+
+- have fewer slides
+- put fewer words on each slide
+
+During a presentation, you do not want your audience concentrating on your slides, you want them listening to your speech. Don't distract them with lots of text.
+
+If you need speaking notes to help you, prepare them in a separate document.
+
+## Final Presentation
+
+The final exam period for our class is block 16: **Thursday, May 12 from 9:40--11:40 am** 
+
+Each team will have 10 minutes to present their project on Zoom.
+
+I'd recommend listening to this video on the art of lecturing: https://www.youtube.com/watch?v=Unzc731iCUY
+
+##### Optional
+
+Post your presentation to a Github Pages site. [This will make your presentation publicly viewable.]{.bg-danger .text-danger} 
+
+First read about Github Pages: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
+
+The idea is relatively straightforward: We want to create a branch in our repository named `gh-pages` that has only one file in it, named `index.html` and containing our presentation document.
+
+
+
+## Teammate peer review form
+
+Fill out the Google form. Link will be provided when appropriate.
