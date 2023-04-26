@@ -1,7 +1,7 @@
 ---
 title: "Final Project: Complete Data Report"
 author: "Math 271"
-date: "Spring 2022"
+date: "Spring 2023"
 output: 
   html_document: default
 
@@ -16,7 +16,7 @@ library(moderndive)
 
 ## Project Outline
 
-In this project you will work with a partner to create a more formal/structured data science presentation using a data set of your choosing.
+In this project you will create a more formal/structured data science presentation using a data set of your choosing.
 
 
 1. Identify project data set: This is the least straightforward phase of the project. Do not procrastinate, start early and get help/feedback early and often in office hours or via email.
@@ -38,11 +38,9 @@ Since everything is a team effort this time, I'll leave it up to you how you wan
 
 ### Getting Started (Week 1)
 
-1. Find a partner to work with.
-2. Set up the project repository on Github and get it set up to work with however your team thinks best.
-3. Identify a data set to use.
+Identify a data set to use.
 
-The third step here can be the most challenging aspect of the project. The data set must meet certain minimum requirements
+In some ways this is the most challenging aspect of the project. The data set must meet certain minimum requirements
 
 #### Data Requirements
 
@@ -68,7 +66,7 @@ If the ggplot command `geom_point(aes(x=x, y=y, color=z))` makes a sensible scat
 Since we have already looked at the FiveThirtyEight data sets for the seminar, please try to choose something from another source. We are looking for more scientific or government-collected data for this project.
 
 
-## Project proposal (Week 2, due Apr 29)
+## Project proposal (Week 2, due May 1)
 
 
 Obtain your data set, and save the file to your project folder. Open the `proposal.Rmd` file and complete all of the code chunks. If you can make the last plot then you have a good data set, and you're well on your way to finishing the project. 
@@ -76,7 +74,7 @@ Obtain your data set, and save the file to your project folder. Open the `propos
 Commit your completed proposal document to the `main` branch of your repository by the deadline.
 
 
-## First Draft Submission (Week 3, due Friday May 6)
+## First Draft Submission (Week 3, due Monday May 8)
 
 Create a new Rmarkdown **presentation** (slideshow) document. There are a few options to choose from
 
@@ -121,9 +119,9 @@ If you need speaking notes to help you, prepare them in a separate document.
 
 ## Final Presentation
 
-The final exam period for our class is block 16: **Thursday, May 12 from 9:40--11:40 am** 
+The final exam period for our class is block 16: **Tuesday, May 9 from 4:10--6:10 pm** 
 
-Each team will have 10 minutes to present their project on Zoom.
+Each person will have 10 minutes to present their project.
 
 I'd recommend listening to this video on the art of lecturing: https://www.youtube.com/watch?v=Unzc731iCUY
 
@@ -134,9 +132,3 @@ Post your presentation to a Github Pages site. [This will make your presentation
 First read about Github Pages: https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages
 
 The idea is relatively straightforward: We want to create a branch in our repository named `gh-pages` that has only one file in it, named `index.html` and containing our presentation document.
-
-
-
-## Teammate peer review form
-
-Fill out the Google form. Link will be provided when appropriate.
