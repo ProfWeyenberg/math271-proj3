@@ -23,7 +23,7 @@ In this project you will create a more formal/structured data science presentati
 2. Formal Data Proposal: Fill out a response document form with information about your data, and perform exploratory analysis on the data set.
 3. First submission: Initial submission of the introduction and results portions of the presentation.
 4. Revisions. Incorporate instructor feedback and work on the discussion/conclusion section.
-5. Presentation. During the final exam period for the class, your team will present the project over zoom.
+5. Presentation. During the final exam period for the class, you will present the project over zoom.
 
 ## Deliverables
 
@@ -31,10 +31,7 @@ All deliverables are to be submitted as commits to the `main` branch of your tea
 
 1. A project proposal. This is a form document to be filled in.
 2. First draft submission.
-3. Presentation over Zoom. (and committed to Github repository)
-4. Individually: Teammate peer review form.
-
-Since everything is a team effort this time, I'll leave it up to you how you want to handle the sharing of work. This is good use case for the RStudio Workbench _Share Project_ feature. If one person clones the repository from Github and shares it with the other, then you can both work collaboratively without a lot of git merging. However, you should still regularly commit your files to the git repository and push to github. That way, even if your partner accidentally deletes something important, it is possible to recover it using git.
+3. Presentation during finals period. (and committed to Github repository)
 
 ### Getting Started (Week 1)
 
